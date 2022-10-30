@@ -69,7 +69,7 @@ section img {
 .content__title {
     font-size: 3rem;
     position: absolute;
-    bottom: 15rem;
+    bottom: 100%;
     width: fit-content;
     left: 50%;
     margin-left: -12rem;
@@ -82,13 +82,15 @@ section img {
 }
 
 .content__description {
+    margin-top: 2rem;
     width: 50%;
     height:fit-content;
     font-size: 1.3rem;
     color:#fff;
     line-height: 1.4;
     letter-spacing: 2;
-    text-shadow: 2rem 2rem 2rem #000;
+    /* text-shadow: 2rem 2rem 2rem #000; */
+    /* background-color: rgba(1, 4, 5, 0.3); */
     animation: rise linear 7s;
 
     /* font-weight: 600; */
@@ -101,7 +103,8 @@ section img {
 .count-down {
     position: absolute;
     width: 100%;
-    top: 12rem;
+    min-width: 100%;
+    top: 90%;
     display: flex;
     font-size: 2rem;
     justify-content: space-evenly;
@@ -109,10 +112,15 @@ section img {
 
 }
 
+.box {
+    margin: 1rem;
+}
+
 .box h3 {
     font-size: 3rem;
-
 }
+
+
 
 
 /* test */
@@ -130,4 +138,14 @@ section img {
 .bat-animation {
     width: 5rem;
     height: 3rem;
+}
+
+@media ( max-width: 500px) { 
+    .count-down {
+        font-size: 1rem;
+    }
+    
+    .count-down h3 {
+        font-size: 2rem;
+    }
 }
