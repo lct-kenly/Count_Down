@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./assets/img/pumpkin.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css" integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div id="header">
+            <div class="snowflake">
+           <img class="bat-animation" src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+            <img class="bat-animation" src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />  
+         </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+            <div class="snowflake">
+          <img class="bat-animation"  src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" /> 
+            </div>
+    </div>
+
+    <div id="main">
+        <section>
+            <img id="bg" src="./assets/img/bg.jpg" alt="background">
+            <img src="./assets/img/bats.png" alt="bat" id="bat">
+            <img src="./assets/img/castle.png" alt="castle" id="castle">
+            <img src="./assets/img/wolf.png" alt="wolf" id="wolf">
+            <img src="./assets/img/img.png" alt="witch" id="witch">
+        </section>
+
+        <div class="content">
+            <h3 class="content__title">
+                We will coming soon
+            </h3>
+            <p class="content__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic est saepe, magni, temporibus consequatur dicta impedit ex velit illum eos fugiat. Quidem, recusandae quisquam. Fugit similique hic quidem velit!
+                Earum dolorem, officia nisi deserunt libero beatae totam exercitationem sint. Iure magni explicabo nemo corrupti blanditiis tempora quod dignissimos quaerat ratione, in asperiores vel odit facere officiis facilis totam quia.
+            </p>
+            <div class="count-down">
+                <div class="box">
+                    <h3 id="days">
+                        00
+                    </h3>
+                    <p>days</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="hours">
+                        00
+                    </h3>
+                    <p>hours</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="minutes">
+                        00
+                    </h3>
+                    <p>minutes</p>
+                </div>
+
+                <div class="box">
+                    <h3 id="seconds">
+                        00
+                    </h3>
+                    <p>seconds</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script>
+        let countDate = new Date('dec 1, 2022 00:00:00').getTime();
+
+        function countDown() {
+
+            let now = new Date().getTime();
+            gap  = countDate - now;
+
+            let seconds = 1000;
+            let minutes = seconds * 60;
+            let hours = minutes * 60;
+            let days = hours * 24;
+
+            let d = Math.floor(gap / (days));
+            let h = Math.floor((gap % (days)) / (hours));
+            let m = Math.floor((gap % (hours)) / (minutes));
+            let s = Math.floor((gap % (minutes)) / (seconds));
+
+            document.getElementById('days').innerText = d;
+            document.getElementById('hours').innerText = h;
+            document.getElementById('minutes').innerText = m;
+            document.getElementById('seconds').innerText = s;
+        }
+
+        setInterval(function() {
+            countDown();
+        },1000)
+    </script>
+</body>
+</html>
