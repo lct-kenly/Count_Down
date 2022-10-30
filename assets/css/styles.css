@@ -52,6 +52,8 @@ section img {
 .content {
     z-index: 2;
     position: absolute;
+    width: 100%;
+    height: 22vh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -81,6 +83,7 @@ section img {
 
 .content__description {
     width: 50%;
+    height:fit-content;
     font-size: 1.3rem;
     color:#fff;
     line-height: 1.4;
